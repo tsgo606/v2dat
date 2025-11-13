@@ -25,7 +25,7 @@ jobs:
           mkdir -p dist
           for arch in amd64 arm64 mipsle; do
             echo "Building for $arch..."
-            CGO_ENABLED=0 GOOS=linux GOARCH=$arch go build -o dist/v2dat-linux-$arch ./cmd/v2dat
+            CGO_ENABLED=0 GOOS=linux GOARCH=$arch go build -o dist/v2dat-linux-$arch .
           done
           echo "Build finished."
 
